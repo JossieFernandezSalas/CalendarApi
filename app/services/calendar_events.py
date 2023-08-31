@@ -1,3 +1,7 @@
+# Author: Jossie Esteban Fernández Salas
+# Email: jossie.fernandez.salas@gmail.com
+# Linkedin: linkedin.com/in/jossiefernandez
+
 from app.responses.response import response_json
 from app.services.calendar_services import get_calendar_service
 

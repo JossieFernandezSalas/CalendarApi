@@ -1,3 +1,7 @@
+# Author: Jossie Esteban Fernández Salas
+# Email: jossie.fernandez.salas@gmail.com
+# Linkedin: linkedin.com/in/jossiefernandez
+
 from fastapi import APIRouter, Request
 from app.services.calendar_events import create_event, get_event, delete_event, update_event
 

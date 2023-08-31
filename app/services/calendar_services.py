@@ -1,3 +1,7 @@
+# Author: Jossie Esteban Fernández Salas
+# Email: jossie.fernandez.salas@gmail.com
+# Linkedin: linkedin.com/in/jossiefernandez
+
 from os import path
 import pickle
 from google.auth.transport.requests import Request
