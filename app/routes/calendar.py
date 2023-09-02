@@ -3,7 +3,7 @@
 # Linkedin: linkedin.com/in/jossiefernandez
 
 from fastapi import APIRouter, Request
-from app.services.calendar_events import create_event, get_event, delete_event, update_event
+from app.services.calendar_events import create_event, get_event, delete_event, update_event, get_events
 
 
 calendar_routes = APIRouter()
@@ -15,6 +15,9 @@ async def create(request: Request):
     return create_event(template)
 
 
+@calendar_routes.get("/events/")
+def get():
+    return get_events()
 
 
 @calendar_routes.get("/event/{eventId}")

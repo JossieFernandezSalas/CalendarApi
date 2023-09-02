@@ -17,6 +17,14 @@ def create_event(template: dict):
         return response_json(message=e.message, status=500)
 
 
+def get_events():
+    try:
+        response = service.events().list(calendarId="primary").execute()
+        return response
+    except Exception as e:
+        return response_json(message=e.message, status=500)
+
+
 def get_event(eventId: str):
     try:
         response = service.events().get(calendarId="primary", eventId=eventId).execute()
