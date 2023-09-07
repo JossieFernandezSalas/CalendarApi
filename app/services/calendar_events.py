@@ -19,8 +19,15 @@ def create_event(template: dict):
 
 def get_events():
     try:
-        response = service.events().list(calendarId="primary").execute()
-        return response
+        response = service.events().list(calendarId="primary",
+                                         maxResults=200,
+                                         singleEvents=True,
+                                         orderBy="startTime",
+                                         showDeleted=False,
+                                         showHiddenInvitations=False,
+                                         timeMin="2023-01-01T01:00:00Z",
+                                         timeMax="2023-12-31T23:59:00Z").execute()
+        return response["items"]
     except Exception as e:
         return response_json(message=e.message, status=500)
 
